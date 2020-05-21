@@ -145,31 +145,69 @@ table {
 html,
 body {
   font-size: 62.5%;
-  height: 100%;
+  height: 100vh;
   background-color: #FAF0E6;
   color: #000080;
+}
+@media (max-width: 500px) {
+  html a,
+  body a {
+    font-size: 1.5rem;
+  }
+  html header,
+  body header {
+    width: 20%;
+  }
+  html header nav p,
+  body header nav p {
+    padding-left: 25%;
+  }
+}
+.container {
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
-}
-header {
   height: 100%;
+  width: 100%;
+}
+.container header {
+  height: 100vh;
   width: 15%;
   border-bottom: 3px solid #483D8B;
-  background-image: url(https://images.all-free-download.com/images/graphicthumb/nostalgic_blue_background_06_hd_pictures_169782.jpg);
+  background-image: url("https://images.all-free-download.com/images/graphicthumb/nostalgic_blue_background_06_hd_pictures_169782.jpg");
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: space-around;
 }
-header nav p {
+.container header nav p {
   padding-top: 6rem;
   padding-bottom: 6rem;
   padding-left: 33%;
 }
-h1 {
+.container header nav p a {
+  color: #FAF0E6;
+  font-size: 2rem;
+}
+.container section {
+  height: 100vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+}
+.container section div {
+  margin: 0 5%;
+  padding: 1% 10%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+}
+.container section div h1 {
   font-size: 4rem;
   display: flex;
   flex-direction: row;
@@ -178,19 +216,45 @@ h1 {
   background-color: #a9a9a9;
   padding: 2%;
 }
-.intro p {
+.container section div .intro p {
   font-size: 2rem;
 }
-h2 {
+.container section div h2 {
   font-size: 3rem;
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
 }
-a {
-  color: #FAF0E6;
-  font-size: 2rem;
+.container section div p {
+  margin: 2% auto;
+  width: 80%;
+  font-size: 1.75rem;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+.container section div ul {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+}
+.container section div ul li {
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  .container section a {
+    font-size: 1.5rem;
+  }
+  .container section header {
+    width: 20%;
+  }
+  .container section header nav p {
+    padding-left: 25%;
+  }
 }
 .aboutme {
   border-top: 4px solid #483D8B;
@@ -199,7 +263,7 @@ a {
 .history h2 {
   margin-bottom: 2%;
 }
-span {
+.history span {
   padding: 1%;
   width: 100%;
   background-color: #a9a9a9;
@@ -209,39 +273,4 @@ span {
 }
 #mid {
   background-color: #FAF0E6;
-}
-section {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: space-around;
-}
-section div {
-  margin: 0 5%;
-  padding: 1% 10%;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: space-around;
-}
-section div p {
-  margin: 2% auto;
-  width: 80%;
-  font-size: 1.75rem;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-}
-@media (max-width: 500px) {
-  a {
-    font-size: 1.5rem;
-  }
-  header {
-    width: 20%;
-  }
-  header nav p {
-    padding-left: 25%;
-  }
 }
