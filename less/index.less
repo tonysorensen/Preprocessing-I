@@ -78,47 +78,92 @@ html, body {
 	color: @fontc;
 	.row();
 	flex-wrap: wrap;
+	
 }
 
 header {
 	height: 100%;
 	width: 15%;
 	border-bottom: 3px solid @borderc;
-	background-color: steelblue;
+	background-image: url(https://images.all-free-download.com/images/graphicthumb/nostalgic_blue_background_06_hd_pictures_169782.jpg);
 	.column();
+	nav p {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+		padding-left: 33%;
+	}
 }
+
+
 h1 {
 	font-size: 4rem;
 .row();
+	background-color: #a9a9a9;
+	padding: 2%;
+}
+.intro p{
+	font-size: 2rem;
 }
 h2 {
 	font-size: 3rem;
 	.row();
 }
-p {
-	margin: 2% auto;
-	width: 80%;
-	font-size: 1.75rem;
-	.row();
-}
+
 a{
-	color: @fontc;
+	color: @bg;
 	font-size: 2rem;
 }
 
-nav p{
-	padding-top: 6rem;
-	padding-bottom: 6rem;
-	padding-left: 25%;
+.aboutme {
+	border-top: 4px solid @borderc;
+	border-bottom: 4px solid @borderc;
+	
+	
 }
+.history h2 {
+	margin-bottom: 2%;
+}
+
+span {
+	padding: 1%;
+	width: 100%;
+	background-color: #a9a9a9 ;
+	margin: 0% auto;
+	font-size: 1.5rem;
+	color: #2F4F4F;
+}
+#mid {
+	background-color: @bg;
+}
+
+
+
 
 section {
 	width: 80%;
 	.column();
+	div {
+		margin: 0 5%;
+		padding: 1% 10%;
+		.column();
+		p {
+			margin: 2% auto;
+			width: 80%;
+			font-size: 1.75rem;
+			.row();
+		}
+	}
 }
 
-div {
-	margin: 0 auto;
-	padding: 1% 10%;
-	.column();
+@media (max-width: 500px) {
+	a {
+		font-size: 1.5rem;
+	}
+	header {
+		width: 20%;
+	}
+	header nav p {
+		padding-left: 25%;
+	}
 }
+

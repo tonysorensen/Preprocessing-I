@@ -158,11 +158,16 @@ header {
   height: 100%;
   width: 15%;
   border-bottom: 3px solid #483D8B;
-  background-color: steelblue;
+  background-image: url(https://images.all-free-download.com/images/graphicthumb/nostalgic_blue_background_06_hd_pictures_169782.jpg);
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: space-around;
+}
+header nav p {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 33%;
 }
 h1 {
   font-size: 4rem;
@@ -170,6 +175,11 @@ h1 {
   flex-direction: row;
   align-content: center;
   justify-content: center;
+  background-color: #a9a9a9;
+  padding: 2%;
+}
+.intro p {
+  font-size: 2rem;
 }
 h2 {
   font-size: 3rem;
@@ -178,23 +188,27 @@ h2 {
   align-content: center;
   justify-content: center;
 }
-p {
-  margin: 2% auto;
-  width: 80%;
-  font-size: 1.75rem;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-}
 a {
-  color: #000080;
+  color: #FAF0E6;
   font-size: 2rem;
 }
-nav p {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  padding-left: 25%;
+.aboutme {
+  border-top: 4px solid #483D8B;
+  border-bottom: 4px solid #483D8B;
+}
+.history h2 {
+  margin-bottom: 2%;
+}
+span {
+  padding: 1%;
+  width: 100%;
+  background-color: #a9a9a9;
+  margin: 0% auto;
+  font-size: 1.5rem;
+  color: #2F4F4F;
+}
+#mid {
+  background-color: #FAF0E6;
 }
 section {
   width: 80%;
@@ -203,11 +217,31 @@ section {
   align-content: center;
   justify-content: space-around;
 }
-div {
-  margin: 0 auto;
+section div {
+  margin: 0 5%;
   padding: 1% 10%;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: space-around;
+}
+section div p {
+  margin: 2% auto;
+  width: 80%;
+  font-size: 1.75rem;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  a {
+    font-size: 1.5rem;
+  }
+  header {
+    width: 20%;
+  }
+  header nav p {
+    padding-left: 25%;
+  }
 }
