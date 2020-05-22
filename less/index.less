@@ -158,23 +158,14 @@ body {
   background-color: @bg;
   color: @fontc;
   font-family: "Libre Baskerville", serif;
-  @media (max-width: 500px) {
-    a {
-      font-size: 1.5rem;
-    }
-    header {
-      width: 20%;
-    }
-    header nav p {
-      padding-left: 25%;
-    }
   }
-}
+
 .container {
   .row();
   flex-wrap: wrap;
   height: 100%;
   width: 100%;
+  
   header {
     height: 100vh;
     width: 15%;
@@ -185,11 +176,20 @@ body {
       padding-top: 6rem;
       padding-bottom: 6rem;
       padding-left: 33%;
+      @media(max-width: 500px){
+        padding-left: 20%;
+      }
       a {
         color: @bg;
-        font-size: 2rem;
-      }
+    font-size: 2rem;
+    @media(max-width: 500px){
+      font-size: 1rem;
+      height: 100vh;
     }
+	  }
+	  
+	}
+	
   }
   section {
     height: 100vh;
@@ -225,114 +225,66 @@ body {
           font-size: 1.5rem;
         }
       }
-      div .history {
-        #work {
-          font-family: "Libre Baskerville", serif;
-          border-collapse: collapse;
-          width: 100%;
-        }
+    }
+    .aboutme {
 
-        #work td,
-        #work th {
-          border-top: 2px solid #ddd;
-          padding: 8px;
-        }
-
-        #work tr:nth-child(even) {
-          background-color: #f2f2f2;
-        }
-
-        #work tr:hover {
-          background-color: #ddd;
-        }
-
-        #work th {
-          padding-top: 12px;
-          padding-bottom: 12px;
-          text-align: left;
-          background-color: @bg;
-          color: red;
-        }
-        div.aboutme {
-          #skills {
-            font-family: "Libre Baskerville", serif;
-            border-collapse: collapse;
-            width: 50%;
-          }
-
-          #skills td,
-          #skills th {
-            border: 1px solid #ddd;
-            padding: 8px;
-          }
-
-          #skills tr:hover {
-            background-color: #ddd;
-          }
-        }
+      #skills {
+		font-size: 12px;
+        font-family: "Libre Baskerville", serif;
+        border-collapse: collapse;
+        width: 50%;
       }
 
-      @media (max-width: 500px) {
-        a {
-          font-size: 1.5rem;
-        }
-        header {
-          width: 20%;
-        }
-        header nav p {
-          padding-left: 25%;
-        }
+      #skills td,
+      #skills th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      #skills tr:hover {
+        background-color: #ddd;
       }
     }
+
+    .history {
+      #work {
+        font-size: 16px;
+        font-family: "Libre Baskerville", serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      #work td,
+      #work th {
+        border-top: 2px solid #ddd;
+        padding: 8px;
+      }
+
+      #work tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      #work tr:hover {
+        background-color: #ddd;
+      }
+
+      #work th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: @bg;
+        color: @fontc;
+      }
+
+      
+	}
+
   }
 
-  #work {
-    font-family: "Libre Baskerville", serif;
-    font-size: 16px;
-    border-collapse: collapse;
-    width: 100%;
-  }
 
-  #work td,
-  #work th {
-    border-top: 2px solid #ddd;
-    padding: 8px;
-  }
 
-  #work tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-
-  #work tr:hover {
-    background-color: #ddd;
-  }
-
-  #work th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: @bg;
-    color: white;
-  }
-
-  #skills {
-    font-family: "Libre Baskerville", serif;
-    border-collapse: collapse;
-    width: 50%;
-  }
-
-  #skills td,
-  #skills th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-
-  #skills tr:hover {
-    background-color: #ddd;
-  }
   .aboutme {
-	  .row();
-	  flex-wrap: wrap;
+    // .row();
     border-top: 4px solid @borderc;
     border-bottom: 4px solid @borderc;
   }
