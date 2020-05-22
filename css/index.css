@@ -214,6 +214,7 @@ body .container section div {
 }
 html .container section div h1,
 body .container section div h1 {
+  font-style: italic;
   font-size: 4rem;
   display: flex;
   flex-direction: row;
