@@ -1,1 +1,370 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+html,
+body {
+  font-size: 62.5%;
+  background-color: #faf0e6;
+  color: #000080;
+  font-family: "Libre Baskerville", serif;
+}
+html .container,
+body .container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100%;
+}
+html .container header,
+body .container header {
+  height: 100vh;
+  width: 15%;
+  border-bottom: 3px solid #483d8b;
+  background-image: url("https://images.all-free-download.com/images/graphicthumb/nostalgic_blue_background_06_hd_pictures_169782.jpg");
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+}
+html .container header nav p,
+body .container header nav p {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 33%;
+}
+@media (max-width: 500px) {
+  html .container header nav p,
+  body .container header nav p {
+    padding-left: 20%;
+  }
+}
+html .container header nav p a,
+body .container header nav p a {
+  color: #faf0e6;
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  html .container header nav p a,
+  body .container header nav p a {
+    font-size: 1rem;
+    height: 100vh;
+  }
+}
+html .container section,
+body .container section {
+  height: 100vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+}
+html .container section div,
+body .container section div {
+  margin: 0 5%;
+  padding: 1% 10%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+}
+html .container section div h1,
+body .container section div h1 {
+  font-style: italic;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  background-color: #a9a9a9;
+  padding: 2%;
+}
+html .container section div .intro p,
+body .container section div .intro p {
+  font-size: 2rem;
+}
+html .container section div h2,
+body .container section div h2 {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+html .container section div p,
+body .container section div p {
+  margin: 2% auto;
+  width: 80%;
+  font-size: 1.75rem;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+html .container section div ul,
+body .container section div ul {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+}
+html .container section div ul li,
+body .container section div ul li {
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  html .container section .intro h1,
+  body .container section .intro h1 {
+    font-size: 3rem;
+  }
+  html .container section .intro p,
+  body .container section .intro p {
+    font-size: 1.8rem;
+  }
+}
+html .container section .aboutme,
+body .container section .aboutme {
+  border-top: 4px solid #483d8b;
+  border-bottom: 4px solid #483d8b;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  html .container section .aboutme h2,
+  body .container section .aboutme h2 {
+    font-size: 1.8rem;
+  }
+  html .container section .aboutme p,
+  body .container section .aboutme p {
+    font-size: 1.2rem;
+  }
+  html .container section .aboutme td,
+  body .container section .aboutme td {
+    font-size: 1.2rem;
+  }
+}
+html .container section .aboutme .right,
+body .container section .aboutme .right {
+  height: 100%;
+  width: 100%;
+  padding: 1%;
+  margin-left: 10%;
+  margin-right: 0;
+}
+html .container section .aboutme .left,
+body .container section .aboutme .left {
+  height: 100%;
+  width: 100%;
+  padding: 1%;
+  margin: 0;
+}
+html .container section .aboutme #skills,
+body .container section .aboutme #skills {
+  font-size: 18px;
+  font-family: "Libre Baskerville", serif;
+  border-collapse: collapse;
+  width: 90%;
+}
+html .container section .aboutme #skills td,
+body .container section .aboutme #skills td,
+html .container section .aboutme #skills th,
+body .container section .aboutme #skills th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+html .container section .aboutme #skills tr:hover,
+body .container section .aboutme #skills tr:hover {
+  background-color: #ddd;
+}
+html .container section .history h2,
+body .container section .history h2 {
+  margin-bottom: 2%;
+}
+@media (max-width: 500px) {
+  html .container section .history h2,
+  body .container section .history h2 {
+    font-size: 1.5rem;
+  }
+  html .container section .history p,
+  body .container section .history p {
+    font-size: 0.8rem;
+  }
+}
+html .container section .history #work,
+body .container section .history #work {
+  font-size: 16px;
+  font-family: "Libre Baskerville", serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+html .container section .history #work td,
+body .container section .history #work td,
+html .container section .history #work th,
+body .container section .history #work th {
+  border-top: 2px solid #ddd;
+  padding: 8px;
+}
+html .container section .history #work tr:nth-child(even),
+body .container section .history #work tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+html .container section .history #work tr:hover,
+body .container section .history #work tr:hover {
+  background-color: #ddd;
+}
+html .container section .history #work th,
+body .container section .history #work th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #faf0e6;
+  color: #000080;
+}

@@ -4,56 +4,331 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+@bg: #faf0e6;
+@fontc: #000080;
+@borderc: #483d8b;
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
 }
 
-html, body {
-    height: 100%;
+.row {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  
+  background-color: @bg;
+  color: @fontc;
+  font-family: "Libre Baskerville", serif;
+  .container {
+    .row();
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100%;
+  
+    header {
+      height: 100vh;
+      width: 15%;
+      border-bottom: 3px solid @borderc;
+      background-image: url("https://images.all-free-download.com/images/graphicthumb/nostalgic_blue_background_06_hd_pictures_169782.jpg");
+      .column();
+      nav p {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        padding-left: 33%;
+        @media (max-width: 500px) {
+          padding-left: 20%;
+        }
+        a {
+          color: @bg;
+          font-size: 2rem;
+          @media (max-width: 500px) {
+            font-size: 1rem;
+            height: 100vh;
+          }
+        }
+      }
+    }
+    section {
+      height: 100vh;
+      width: 80%;
+      .column();
+  
+      div {
+        margin: 0 5%;
+        padding: 1% 10%;
+        .column();
+        h1 {
+          font-style: italic;
+          font-size: 4rem;
+          .row();
+          background-color: #a9a9a9;
+          padding: 2%;
+        }
+        .intro p {
+          
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 3rem;
+          .row();
+        }
+        p {
+          margin: 2% auto;
+          width: 80%;
+          font-size: 1.75rem;
+          .row();
+        }
+        ul {
+          .column();
+          li {
+            margin: 0 auto;
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .intro {
+        @media (max-width: 500px) {
+          h1 {
+            font-size: 3rem;
+          }
+  
+          p {
+            font-size: 1.8rem;
+          }
+        }
+      }
+      .aboutme {
+        @media (max-width: 500px) {
+          h2 {
+            font-size: 1.8rem;
+          }
+          p {
+            font-size: 1.2rem;
+          }
+          td {
+            font-size: 1.2rem;
+          }
+        }
+  
+        border-top: 4px solid @borderc;
+        border-bottom: 4px solid @borderc;
+  
+        padding: 1%;
+        .row();
+        .right {
+          height: 100%;
+          width: 100%;
+          padding: 1%;
+          margin-left: 10%;
+          margin-right: 0;
+        }
+        .left {
+          height: 100%;
+          width: 100%;
+          padding: 1%;
+          margin: 0;
+        }
+  
+        #skills {
+          font-size: 18px;
+          font-family: "Libre Baskerville", serif;
+          border-collapse: collapse;
+          width: 90%;
+        }
+  
+        #skills td,
+        #skills th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+  
+        #skills tr:hover {
+          background-color: #ddd;
+        }
+      }
+  
+      .history {
+        h2 {
+          margin-bottom: 2%;
+        }
+        @media (max-width: 500px) {
+          h2 {
+            font-size: 1.5rem;
+          }
+          p {
+            font-size: 0.8rem;
+          }
+        }
+        #work {
+          font-size: 16px;
+          font-family: "Libre Baskerville", serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+  
+        #work td,
+        #work th {
+          border-top: 2px solid #ddd;
+          padding: 8px;
+        }
+  
+        #work tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+  
+        #work tr:hover {
+          background-color: #ddd;
+        }
+  
+        #work th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: @bg;
+          color: @fontc;
+        }
+      }
+    }
+  }
+  
 }
 
