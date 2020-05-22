@@ -119,7 +119,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -146,8 +146,9 @@ html,
 body {
   font-size: 62.5%;
   height: 100vh;
-  background-color: #FAF0E6;
+  background-color: #faf0e6;
   color: #000080;
+  font-family: "Libre Baskerville", serif;
 }
 @media (max-width: 500px) {
   html a,
@@ -175,7 +176,7 @@ body {
 .container header {
   height: 100vh;
   width: 15%;
-  border-bottom: 3px solid #483D8B;
+  border-bottom: 3px solid #483d8b;
   background-image: url("https://images.all-free-download.com/images/graphicthumb/nostalgic_blue_background_06_hd_pictures_169782.jpg");
   display: flex;
   flex-direction: column;
@@ -188,7 +189,7 @@ body {
   padding-left: 33%;
 }
 .container header nav p a {
-  color: #FAF0E6;
+  color: #faf0e6;
   font-size: 2rem;
 }
 .container section {
@@ -245,32 +246,110 @@ body {
   margin: 0 auto;
   font-size: 1.5rem;
 }
+.container section div div .history #work {
+  font-family: "Libre Baskerville", serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.container section div div .history #work td,
+.container section div div .history #work th {
+  border-top: 2px solid #ddd;
+  padding: 8px;
+}
+.container section div div .history #work tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.container section div div .history #work tr:hover {
+  background-color: #ddd;
+}
+.container section div div .history #work th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #faf0e6;
+  color: red;
+}
+.container section div div .history div.aboutme #skills {
+  font-family: "Libre Baskerville", serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+.container section div div .history div.aboutme #skills td,
+.container section div div .history div.aboutme #skills th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.container section div div .history div.aboutme #skills tr:hover {
+  background-color: #ddd;
+}
 @media (max-width: 500px) {
-  .container section a {
+  .container section div a {
     font-size: 1.5rem;
   }
-  .container section header {
+  .container section div header {
     width: 20%;
   }
-  .container section header nav p {
+  .container section div header nav p {
     padding-left: 25%;
   }
 }
-.aboutme {
-  border-top: 4px solid #483D8B;
-  border-bottom: 4px solid #483D8B;
+.container #work {
+  font-family: "Libre Baskerville", serif;
+  font-size: 16px;
+  border-collapse: collapse;
+  width: 100%;
 }
-.history h2 {
+.container #work td,
+.container #work th {
+  border-top: 2px solid #ddd;
+  padding: 8px;
+}
+.container #work tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.container #work tr:hover {
+  background-color: #ddd;
+}
+.container #work th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #faf0e6;
+  color: white;
+}
+.container #skills {
+  font-family: "Libre Baskerville", serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+.container #skills td,
+.container #skills th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.container #skills tr:hover {
+  background-color: #ddd;
+}
+.container .aboutme {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-top: 4px solid #483d8b;
+  border-bottom: 4px solid #483d8b;
+}
+.container .history h2 {
   margin-bottom: 2%;
 }
-.history span {
+.container .history span {
   padding: 1%;
   width: 100%;
   background-color: #a9a9a9;
   margin: 0% auto;
   font-size: 1.5rem;
-  color: #2F4F4F;
+  color: #2f4f4f;
 }
-#mid {
-  background-color: #FAF0E6;
+.container #mid {
+  background-color: #faf0e6;
 }
