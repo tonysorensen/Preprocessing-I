@@ -154,153 +154,179 @@ table {
 html,
 body {
   font-size: 62.5%;
-  height: 100vh;
+  
   background-color: @bg;
   color: @fontc;
   font-family: "Libre Baskerville", serif;
-  }
-
-.container {
-  .row();
-  flex-wrap: wrap;
-  height: 100%;
-  width: 100%;
+  .container {
+    .row();
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100%;
   
-  header {
-    height: 100vh;
-    width: 15%;
-    border-bottom: 3px solid @borderc;
-    background-image: url("https://images.all-free-download.com/images/graphicthumb/nostalgic_blue_background_06_hd_pictures_169782.jpg");
-    .column();
-    nav p {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
-      padding-left: 33%;
-      @media(max-width: 500px){
-        padding-left: 20%;
-      }
-      a {
-        color: @bg;
-    font-size: 2rem;
-    @media(max-width: 500px){
-      font-size: 1rem;
+    header {
       height: 100vh;
-    }
-	  }
-	  
-	}
-	
-  }
-  section {
-    height: 100vh;
-    width: 80%;
-    .column();
-    div {
-      margin: 0 5%;
-      padding: 1% 10%;
+      width: 15%;
+      border-bottom: 3px solid @borderc;
+      background-image: url("https://images.all-free-download.com/images/graphicthumb/nostalgic_blue_background_06_hd_pictures_169782.jpg");
       .column();
-      h1 {
-        font-size: 4rem;
-        .row();
-        background-color: #a9a9a9;
-        padding: 2%;
-      }
-      .intro p {
-        font-size: 2rem;
-      }
-      h2 {
-        font-size: 3rem;
-        .row();
-      }
-      p {
-        margin: 2% auto;
-        width: 80%;
-        font-size: 1.75rem;
-        .row();
-      }
-      ul {
-        .column();
-        li {
-          margin: 0 auto;
-          font-size: 1.5rem;
+      nav p {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        padding-left: 33%;
+        @media (max-width: 500px) {
+          padding-left: 20%;
+        }
+        a {
+          color: @bg;
+          font-size: 2rem;
+          @media (max-width: 500px) {
+            font-size: 1rem;
+            height: 100vh;
+          }
         }
       }
     }
-    .aboutme {
-
-      #skills {
-		font-size: 12px;
-        font-family: "Libre Baskerville", serif;
-        border-collapse: collapse;
-        width: 50%;
+    section {
+      height: 100vh;
+      width: 80%;
+      .column();
+  
+      div {
+        margin: 0 5%;
+        padding: 1% 10%;
+        .column();
+        h1 {
+          font-size: 4rem;
+          .row();
+          background-color: #a9a9a9;
+          padding: 2%;
+        }
+        .intro p {
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 3rem;
+          .row();
+        }
+        p {
+          margin: 2% auto;
+          width: 80%;
+          font-size: 1.75rem;
+          .row();
+        }
+        ul {
+          .column();
+          li {
+            margin: 0 auto;
+            font-size: 1.5rem;
+          }
+        }
       }
-
-      #skills td,
-      #skills th {
-        border: 1px solid #ddd;
-        padding: 8px;
+      .intro {
+        @media (max-width: 500px) {
+          h1 {
+            font-size: 3rem;
+          }
+  
+          p {
+            font-size: 1.8rem;
+          }
+        }
       }
-
-      #skills tr:hover {
-        background-color: #ddd;
+      .aboutme {
+        @media (max-width: 500px) {
+          h2 {
+            font-size: 1.8rem;
+          }
+          p {
+            font-size: 1.2rem;
+          }
+          td {
+            font-size: 1.2rem;
+          }
+        }
+  
+        border-top: 4px solid @borderc;
+        border-bottom: 4px solid @borderc;
+  
+        padding: 1%;
+        .row();
+        .right {
+          height: 100%;
+          width: 100%;
+          padding: 1%;
+          margin-left: 10%;
+          margin-right: 0;
+        }
+        .left {
+          height: 100%;
+          width: 100%;
+          padding: 1%;
+          margin: 0;
+        }
+  
+        #skills {
+          font-size: 18px;
+          font-family: "Libre Baskerville", serif;
+          border-collapse: collapse;
+          width: 90%;
+        }
+  
+        #skills td,
+        #skills th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+  
+        #skills tr:hover {
+          background-color: #ddd;
+        }
+      }
+  
+      .history {
+        h2 {
+          margin-bottom: 2%;
+        }
+        @media (max-width: 500px) {
+          h2 {
+            font-size: 1.5rem;
+          }
+          p {
+            font-size: 0.8rem;
+          }
+        }
+        #work {
+          font-size: 16px;
+          font-family: "Libre Baskerville", serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+  
+        #work td,
+        #work th {
+          border-top: 2px solid #ddd;
+          padding: 8px;
+        }
+  
+        #work tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+  
+        #work tr:hover {
+          background-color: #ddd;
+        }
+  
+        #work th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: @bg;
+          color: @fontc;
+        }
       }
     }
-
-    .history {
-      #work {
-        font-size: 16px;
-        font-family: "Libre Baskerville", serif;
-        border-collapse: collapse;
-        width: 100%;
-      }
-
-      #work td,
-      #work th {
-        border-top: 2px solid #ddd;
-        padding: 8px;
-      }
-
-      #work tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-
-      #work tr:hover {
-        background-color: #ddd;
-      }
-
-      #work th {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-align: left;
-        background-color: @bg;
-        color: @fontc;
-      }
-
-      
-	}
-
   }
-
-
-
-  .aboutme {
-    // .row();
-    border-top: 4px solid @borderc;
-    border-bottom: 4px solid @borderc;
-  }
-  .history h2 {
-    margin-bottom: 2%;
-  }
-
-  .history span {
-    padding: 1%;
-    width: 100%;
-    background-color: #a9a9a9;
-    margin: 0% auto;
-    font-size: 1.5rem;
-    color: #2f4f4f;
-  }
-  #mid {
-    background-color: @bg;
-  }
+  
 }
+
